@@ -11,7 +11,7 @@ type colorgo struct {
 
 func NewColorGo() *colorgo {
 	result := new(colorgo)
-	result.SetColor(colors.DebugColor)
+	result.SetColor(colors.DefaultColor)
 	return result
 }
 
@@ -20,5 +20,10 @@ func (c *colorgo) SetColor(color string) {
 }
 
 func (c *colorgo) Println(str string) {
-	fmt.Println(fmt.Printf(c.selectedColor, str))
+	fmt.Println(fmt.Sprintf(c.selectedColor, str))
+
+}
+
+func (c *colorgo) Printf(str string) {
+	fmt.Printf(c.selectedColor, str)
 }

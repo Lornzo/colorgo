@@ -1,8 +1,9 @@
 package colorgo
 
 import (
-	"colorgo/colors"
 	"fmt"
+
+	"github.com/Lornzo/colorgo/colors"
 )
 
 type colorgo struct {
